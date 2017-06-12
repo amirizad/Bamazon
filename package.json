@@ -1,0 +1,24 @@
+{
+  "name": "amirizad",
+  "version": "1.0.0",
+  "description": "Make sure you save and require the MySQL and Inquirer npm packages in your homework files--your app will need them for data input and storage.",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirizad/Bamazon"
+  },
+  "author": "amirizad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirizad/Bamazon"
+  },
+  "homepage": "https://github.com/amirizad/Bamazon",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^3.1.0",
+    "mysql": "^2.13.0"
+  }
+}
