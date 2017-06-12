@@ -10,19 +10,19 @@ var connection = mysql.createConnection({
  
 connection.connect((err) => {
   if (err) throw err;
-  showMenu();
+  showM_Menu();
 });
 
-var showMenu = () =>{
+var showM_Menu = () =>{
   inquirer.prompt(
 	{
 		type: "list",
 		message: "Please choose your option:",
 		choices: ["View Products for Sale", "View Low Inventory", "Add to Inventory", "Add New Product", new inquirer.Separator(), "Main Menu", "Exit"],
-		name: "menu"
+		name: "m_menu"
 	}      
   ).then((answer) => {
-	switch (answer.menu){
+	switch (answer.m_menu){
 		case 'View Products for Sale':
 			showProducts();
 			break;
@@ -36,7 +36,7 @@ var showMenu = () =>{
 			addNewProduct();
 			break;
 		case 'Main Menu':
-			// showMenu();
+			// showM_Menu();
 			break;
 		case 'Exit':
 			connection.end();
@@ -58,7 +58,7 @@ var showProducts = () => {
 		);    
 	};
 	console.log(table.toString());
-	showMenu();
+	showM_Menu();
   });
 };
 
@@ -77,7 +77,7 @@ var showLowInventory = () => {
 	  };
 	};
 	console.log(table.toString());
-	showMenu();
+	showM_Menu();
   });
 };
 
@@ -157,11 +157,11 @@ var addNewProduct = () => {
 			qty   = parseInt(answer.qty);
 
 	connection.query("INSERT INTO products SET ?", {
-		product_name: name,
-		department_name: dep,
-		price: price,
-		stock_quantity: qty
-	}, (err, res) => {});
-	showProducts();
+			product_name: name,
+			department_name: dep,
+			price: price,
+			stock_quantity: qty
+		}, (err, res) => {});
+		showProducts();
   });
 };
