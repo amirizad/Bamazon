@@ -103,24 +103,11 @@ var continueShopping = () => {
 		type: "confirm",
 		message: "Do you want to purchase more items?",
 		name: "continue"
-	}      
-  ).then((answer) => {
+	}).then((answer) => {
     if (answer.continue){
       getOrder();
     } else {
-      inquirer.prompt(
-      {
-        type: "confirm",
-        message: "Do you want to return to main menu?",
-        name: "menu"
-      }      
-      ).then((answer) => {
-        if (answer.menu){
-          // getOrder();
-        } else {
-          connection.end();
-        };
-      });
+      connection.end();
     };
   });
 }

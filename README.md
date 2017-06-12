@@ -1,4 +1,8 @@
+#[Bamazon project slideshow](https://github.com/amirizad/Bamazon/blob/master/Bamazon.mp4)
+
+
 # Week of 12 HW: Node.js & MySQL
+
 
 ## Overview
 

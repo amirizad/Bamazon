@@ -18,7 +18,7 @@ var showM_Menu = () =>{
 	{
 		type: "list",
 		message: "Please choose your option:",
-		choices: ["View Products for Sale", "View Low Inventory", "Add to Inventory", "Add New Product", new inquirer.Separator(), "Main Menu", "Exit"],
+		choices: ["View Products for Sale", "View Low Inventory", "Add to Inventory", "Add New Product", new inquirer.Separator(), "Exit"],
 		name: "m_menu"
 	}      
   ).then((answer) => {
@@ -34,9 +34,6 @@ var showM_Menu = () =>{
 			break;
 		case 'Add New Product':
 			addNewProduct();
-			break;
-		case 'Main Menu':
-			// showM_Menu();
 			break;
 		case 'Exit':
 			connection.end();

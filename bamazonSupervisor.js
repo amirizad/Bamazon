@@ -18,7 +18,7 @@ var showS_Menu = () =>{
 	{
 		type: "list",
 		message: "Please choose your option:",
-		choices: ["View Product Sales by Department", "Create New Department", new inquirer.Separator(), "Main Menu", "Exit"],
+		choices: ["View Product Sales by Department", "Create New Department", new inquirer.Separator(), "Exit"],
 		name: "s_menu"
 	}      
   ).then((answer) => {
@@ -28,9 +28,6 @@ var showS_Menu = () =>{
 			break;
 		case 'Create New Department':
 			addDepartment();
-			break;
-		case 'Main Menu':
-			// showMenu();
 			break;
 		case 'Exit':
 			connection.end();
